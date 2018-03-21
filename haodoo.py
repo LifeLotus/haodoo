@@ -108,7 +108,5 @@ if __name__ == "__main__":
     path = sys.argv[2]
     topic.strip()
     path.strip()
-    if path[-1] != '/' and path[-1] != '\\':
-        path = path + '/'
-    path = path + topic + '/'
+    path = os.path.join(path, topic)
     main(topic, path)
